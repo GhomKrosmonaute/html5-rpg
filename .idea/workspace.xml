@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eca859d1-86f9-4b92-a988-a8b3500b368d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/Menu.Bestiary.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/Menu.Settings.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/scenes/Fight.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/scenes/Menu.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/scenes/Village.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-branches.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/bonus_pick.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/bonus_swap.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/bonus_time.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/explode_1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/explode_2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/explode_3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/infection.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_4.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_5.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_6.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_8.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/note_wrong.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/notification.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/score_ring.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/skip.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/spawn.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/star_0.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/star_1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/star_2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/star_3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/tile_blue.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/tile_clips.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/tile_green.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/tile_red.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/tile_yellow.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/validate.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/virus_death.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/virus_move.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/fx/virus_sting.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/music/intro.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/music/menu.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/music/time_challenge.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/music/turn_by_turn.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/music/zen.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/embed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/alienleague/alienleague.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/alienleague/alienleague.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/geosans-light/geosans-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/geosans-light/geosans-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/koulen/koulen.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/koulen/koulen.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/optimus/optimus.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/waffle-crisp/waffle-crisp.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/background_cell_danger_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big_bob_dead.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big_bob_dead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big_bob_idle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big_bob_idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big_bob_sting.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big_bob_sting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big_bob_walk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/big_bob_walk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bonus_heal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bonus_heal_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bonus_swap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bonus_swap_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bonus_time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bonus_time_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bubble.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clip_grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clip_sequence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/crispy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/crispy_x2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/crispy_x3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/crispy_x4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/crispy_x5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/finger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/frost.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hole.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hole.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_action_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_action_button_crunch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_action_button_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_bonus_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_gauge_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_gauge_bar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_gauge_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_gauge_ring_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_gauge_rings_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_gauge_rings_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_gauge_rings_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_gauge_rings_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_menu_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hud_wave.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon_freeze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon_heal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon_infection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon_timed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/joker.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/joker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/medium_bob_dead.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/medium_bob_dead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/medium_bob_idle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/medium_bob_idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/medium_bob_sting.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/medium_bob_sting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/medium_bob_walk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/medium_bob_walk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_back_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_fullscreen_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_fullscreen_button_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_home_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_music_range_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_music_range_full.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_music_range_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_playcurious_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_sound_range_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_sound_range_full.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_sound_range_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_subtitles_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_subtitles_button_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/menu_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_dead.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_dead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_idle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_sting.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_sting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_swim.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_swim.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_walk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/mini_bob_walk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/minimap_level_preview_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/minimap_virus_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/minimap_virus_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/minimap_virus_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/minimap_virus_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/minimap_virus_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/minimap_write_us.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_blue.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_glow_grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_glow_sequence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_gold_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_green.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_joker.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_joker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_red.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_yellow.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/nucleotide_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/particle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/path_arrow.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/path_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/popup_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/popup_background_bis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/popup_background_rounded.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reward_check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reward_cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reward_stars_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reward_stars_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reward_stars_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reward_stars_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reward_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/title_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/titlescreen_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/titlescreen_menu_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/titlescreen_play_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/titlescreen_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/background_cell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/background_cell_danger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/background_layer_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/background_layer_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/layer_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/layer_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/level.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/level_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/level_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/membrane.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/minimap_want_more_levels.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/minimap_watch_trailer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/preview_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/preview_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_1/preview_particles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/background_cell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/background_cell_danger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/background_layer_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/background_layer_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/layer_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/layer_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/level.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/level_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/level_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/membrane.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/minimap_want_more_levels.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/minimap_watch_trailer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/preview_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/preview_locked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/preview_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_2/preview_particles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/background_cell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/background_cell_danger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/background_layer_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/background_layer_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/layer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/level.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/level_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/level_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/membrane.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/minimap_want_more_levels.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/minimap_watch_trailer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/nucleotide_yellow.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/nucleotide_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/preview_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/preview_locked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/preview_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_3/preview_particles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/world_star_container.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animations.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crispr.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/checks.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/bonus.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/editor.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/grid.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/hair.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/hook.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/hud.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/nucleotide.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/path.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/player.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/popup.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/sequence.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/virus.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metrics.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/params.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/arcade.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/level.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/menu.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/section.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/video.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/world.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/writeUs.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/worlds/hidden_world.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/worlds/world_1.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/worlds/world_2.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/worlds/world_3.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/en/video_1_dna_comes_in_pairs.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/en/video_2_dna_vs_rna.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/en/video_3_transcription.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/en/video_4_digital_slime.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/en/video_5_parts_crispr.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/en/video_6_learning_games.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/fr/intro.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/fr/video_1_dna_comes_in_pairs.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/fr/video_2_dna_vs_rna.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/fr/video_3_transcription.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/fr/video_4_digital_slime.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/fr/video_5_parts_crispr.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subtitles/fr/video_6_learning_games.vtt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/text/subtitles_en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/database/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GG8ZrQeNPXow3JN7huTvD7xDQL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\camil\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\222.4167.31\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\camil\WebstormProjects\html5-rpg\views\scenes" />
+      <recent name="C:\Users\camil\WebstormProjects\html5-rpg\views" />
+      <recent name="C:\Users\camil\WebstormProjects\html5-rpg\scenes" />
+      <recent name="C:\Users\camil\WebstormProjects\html5-rpg\frontend" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eca859d1-86f9-4b92-a988-a8b3500b368d" name="Changes" comment="" />
+      <created>1666003618371</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666003618371</updated>
+      <workItem from="1666003620500" duration="553000" />
+      <workItem from="1666004432255" duration="1047000" />
+      <workItem from="1666107792535" duration="1687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
