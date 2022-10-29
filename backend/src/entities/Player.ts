@@ -1,15 +1,17 @@
 import { EventEmitter, BaseEventNames } from "@ghom/event-emitter"
 import { Stat, StatName } from "./Stat"
-import { Item, ItemName } from "./Item"
+import { Equipment } from "./Equipment"
 
 import { clone } from "../utils"
+
+import type { EquipmentName } from "../data/equipment"
 
 export interface PlayerEvents extends BaseEventNames {}
 
 export class Player extends EventEmitter<PlayerEvents> {
   constructor(
     public stats: Record<StatName, Stat>,
-    public inventory: Record<ItemName, Item>
+    public inventory: Record<EquipmentName, Equipment>
   ) {
     super()
   }

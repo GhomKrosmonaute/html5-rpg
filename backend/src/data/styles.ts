@@ -1,0 +1,12 @@
+export type StyleName =
+  | "Devil"
+  | "Angel"
+  | "King"
+  | "Shadow"
+  | "Ninja"
+  | "Barbaric"
+  | "Samurai"
+  | "Sorcerer"
+  | "Knight"
+  | "Assassin"
+  | "Priest"
