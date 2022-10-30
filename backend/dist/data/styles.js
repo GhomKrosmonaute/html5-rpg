@@ -1,6 +1,6 @@
 "use strict"
 Object.defineProperty(exports, "__esModule", { value: true })
-exports.getStylePath = exports.StyleName = void 0
+exports.getStyleLayers = exports.StyleName = void 0
 var StyleName
 ;(function (StyleName) {
   StyleName["Medieval"] = "medieval"
@@ -12,7 +12,12 @@ var StyleName
   StyleName["Gothic"] = "gothic"
   StyleName["Punk"] = "punk"
 })((StyleName = exports.StyleName || (exports.StyleName = {})))
-function getStylePath(styleName, assetName) {
-  return `/assets/images/${styleName}/${assetName}`
+function getStyleLayers({ style, type, element, slot, slotSize }) {
+  return {
+    background: `/assets/images/elements/${element}/color.jpg`,
+    sprite: `/assets/images/styles/${style}/${type}.png`,
+    element: `/assets/images/elements/${element}/icon.png`,
+    slot: `/assets/images/slots/${slot}/${slotSize}.png`,
+  }
 }
-exports.getStylePath = getStylePath
+exports.getStyleLayers = getStyleLayers

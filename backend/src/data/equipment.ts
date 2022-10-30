@@ -7,45 +7,45 @@ import { SlotName, getSlotByEquipmentType, slots } from "./slots"
 import { StyleName } from "./styles"
 import { ElementName } from "./elements"
 
-import { enumEntries, forEachEnum } from "../utils"
+import { forEachEnum } from "../utils"
 
 export enum EquipmentType {
   // Weapons
-  Sword,
-  Gun,
-  Lance,
-  Haxe,
-  Bow,
+  Sword = "sword",
+  Gun = "gun",
+  Lance = "lance",
+  Haxe = "haxe",
+  Bow = "bow",
 
   // Armors
-  Trousers,
-  "T-shirt",
-  Sweater,
-  Helmet,
-  Glasses,
+  Trousers = "trousers",
+  "T-shirt" = "t-shirt",
+  Sweater = "sweater",
+  Helmet = "helmet",
+  Glasses = "glasses",
 
   // Accessories
-  Ring,
-  Necklace,
-  Bracelet,
-  Earring,
+  Ring = "ring",
+  Necklace = "necklace",
+  Bracelet = "bracelet",
+  Earring = "earring",
 
   // Familiars
-  Dragon,
-  Unicorn,
-  Werewolf,
-  Phoenix,
-  Wolf,
-  Cat,
-  Snake,
-  Spider,
-  Bat,
-  Bird,
-  Fish,
-  Turtle,
-  Rabbit,
-  Bear,
-  Lion,
+  Dragon = "dragon",
+  Unicorn = "unicorn",
+  Werewolf = "werewolf",
+  Phoenix = "phoenix",
+  Wolf = "wolf",
+  Cat = "cat",
+  Snake = "snake",
+  Spider = "spider",
+  Bat = "bat",
+  Bird = "bird",
+  Fish = "fish",
+  Turtle = "turtle",
+  Rabbit = "rabbit",
+  Bear = "bear",
+  Lion = "lion",
 }
 
 export interface EquipmentFeatures {

@@ -11,19 +11,19 @@ const utils_1 = require("../utils")
 var SlotName
 ;(function (SlotName) {
   // Weapons & Armors
-  SlotName[(SlotName["Hands"] = 0)] = "Hands"
+  SlotName["Hands"] = "hands"
   // Accessories
-  SlotName[(SlotName["Finger"] = 1)] = "Finger"
-  SlotName[(SlotName["Wrist"] = 2)] = "Wrist"
-  SlotName[(SlotName["Ear"] = 3)] = "Ear"
+  SlotName["Fingers"] = "fingers"
+  SlotName["Wrist"] = "wrist"
+  SlotName["Ears"] = "ears"
   // Armors
-  SlotName[(SlotName["Legs"] = 4)] = "Legs"
-  SlotName[(SlotName["Chest"] = 5)] = "Chest"
-  SlotName[(SlotName["Head"] = 6)] = "Head"
-  SlotName[(SlotName["Neck"] = 7)] = "Neck"
+  SlotName["Legs"] = "legs"
+  SlotName["Chest"] = "chest"
+  SlotName["Head"] = "head"
+  SlotName["Neck"] = "neck"
   // Familiars
-  SlotName[(SlotName["Stand"] = 8)] = "Stand"
-  SlotName[(SlotName["Invocation"] = 9)] = "Invocation"
+  SlotName["Stand"] = "stand"
+  SlotName["Invocation"] = "invocation"
 })((SlotName = exports.SlotName || (exports.SlotName = {})))
 exports.slots = [
   {
@@ -31,7 +31,7 @@ exports.slots = [
     size: 2,
   },
   {
-    name: SlotName.Finger,
+    name: SlotName.Fingers,
     size: 10,
   },
   {
@@ -39,7 +39,7 @@ exports.slots = [
     size: 2,
   },
   {
-    name: SlotName.Ear,
+    name: SlotName.Ears,
     size: 2,
   },
   {
@@ -97,7 +97,7 @@ function getSlotByEquipmentType(type) {
       }
     case equipment_1.EquipmentType.Ring:
       return {
-        slot: SlotName.Finger,
+        slot: SlotName.Fingers,
         slotSizes: [1],
       }
     case equipment_1.EquipmentType.Necklace:
@@ -112,7 +112,7 @@ function getSlotByEquipmentType(type) {
       }
     case equipment_1.EquipmentType.Earring:
       return {
-        slot: SlotName.Ear,
+        slot: SlotName.Ears,
         slotSizes: [1, 2],
       }
     case equipment_1.EquipmentType.Dragon:

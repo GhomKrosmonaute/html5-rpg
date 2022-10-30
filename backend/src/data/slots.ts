@@ -3,22 +3,22 @@ import { enumEntries } from "../utils"
 
 export enum SlotName {
   // Weapons & Armors
-  Hands,
+  Hands = "hands",
 
   // Accessories
-  Finger,
-  Wrist,
-  Ear,
+  Fingers = "fingers",
+  Wrist = "wrist",
+  Ears = "ears",
 
   // Armors
-  Legs,
-  Chest,
-  Head,
-  Neck,
+  Legs = "legs",
+  Chest = "chest",
+  Head = "head",
+  Neck = "neck",
 
   // Familiars
-  Stand,
-  Invocation,
+  Stand = "stand",
+  Invocation = "invocation",
 }
 
 export interface Slot {
@@ -32,7 +32,7 @@ export const slots: Slot[] = [
     size: 2,
   },
   {
-    name: SlotName.Finger,
+    name: SlotName.Fingers,
     size: 10,
   },
   {
@@ -40,7 +40,7 @@ export const slots: Slot[] = [
     size: 2,
   },
   {
-    name: SlotName.Ear,
+    name: SlotName.Ears,
     size: 2,
   },
   {
@@ -102,7 +102,7 @@ export function getSlotByEquipmentType(type: EquipmentType): {
       }
     case EquipmentType.Ring:
       return {
-        slot: SlotName.Finger,
+        slot: SlotName.Fingers,
         slotSizes: [1],
       }
     case EquipmentType.Necklace:
@@ -117,7 +117,7 @@ export function getSlotByEquipmentType(type: EquipmentType): {
       }
     case EquipmentType.Earring:
       return {
-        slot: SlotName.Ear,
+        slot: SlotName.Ears,
         slotSizes: [1, 2],
       }
     case EquipmentType.Dragon:
