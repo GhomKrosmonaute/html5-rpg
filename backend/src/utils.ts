@@ -20,3 +20,12 @@ export function entries<Obj extends object>(
   // @ts-ignore
   return Object.entries(obj)
 }
+
+export function forEachEnum<Enum extends object>(
+  e: Enum,
+  cb: (name: keyof Enum, value: Enum[keyof Enum]) => void
+) {
+  return entries(e)
+    .filter(([name]) => isNaN(Number(name)))
+    .forEach(([name, value]) => cb(name as keyof Enum, value))
+}

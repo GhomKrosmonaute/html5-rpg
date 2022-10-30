@@ -1,6 +1,6 @@
 "use strict"
 Object.defineProperty(exports, "__esModule", { value: true })
-exports.clone = void 0
+exports.forEachEnum = exports.entries = exports.clone = void 0
 function clone(obj) {
   if (obj === null || typeof obj !== "object") {
     return obj
@@ -14,3 +14,14 @@ function clone(obj) {
   return copy
 }
 exports.clone = clone
+function entries(obj) {
+  // @ts-ignore
+  return Object.entries(obj)
+}
+exports.entries = entries
+function forEachEnum(e, cb) {
+  return entries(e)
+    .filter(([name]) => isNaN(Number(name)))
+    .forEach(([name, value]) => cb(name, value))
+}
+exports.forEachEnum = forEachEnum
