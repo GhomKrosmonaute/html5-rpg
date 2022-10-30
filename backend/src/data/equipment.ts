@@ -3,11 +3,11 @@
  * Ils peuvent être des armes, des armures, des objets magiques, des familiers, etc.
  */
 
-import { SlotName, getSlotByEquipmentType } from "./slots"
+import { SlotName, getSlotByEquipmentType, slots } from "./slots"
 import { StyleName } from "./styles"
 import { ElementName } from "./elements"
 
-import { forEachEnum } from "../utils"
+import { enumEntries, forEachEnum } from "../utils"
 
 export enum EquipmentType {
   // Weapons
@@ -81,5 +81,3 @@ forEachEnum(EquipmentType, (typeName, type) => {
     })
   })
 })
-
-console.log(equipments.length)

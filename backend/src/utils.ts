@@ -25,7 +25,9 @@ export function forEachEnum<Enum extends object>(
   e: Enum,
   cb: (name: keyof Enum, value: Enum[keyof Enum]) => void
 ) {
-  return entries(e)
-    .filter(([name]) => isNaN(Number(name)))
-    .forEach(([name, value]) => cb(name as keyof Enum, value))
+  enumEntries(e).forEach(([name, value]) => cb(name as keyof Enum, value))
+}
+
+export function enumEntries<Enum extends object>(e: Enum) {
+  return entries(e).filter(([name]) => isNaN(Number(name)))
 }

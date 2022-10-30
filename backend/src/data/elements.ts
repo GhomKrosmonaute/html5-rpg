@@ -2,6 +2,9 @@
  * Les éléments influencent les faiblesses et les résistances des armes et des armures.
  */
 
+import { enumEntries } from "../utils"
+import { SlotName, slots } from "./slots"
+
 export enum ElementName {
   Water,
   Fire,
@@ -94,3 +97,19 @@ export const elements: ElementFeatures[] = [
     weakness: new Map(),
   },
 ]
+
+export const existingElementCount = enumEntries(ElementName).length
+export const elementCount = elements.length
+
+console.assert(
+  elementCount === existingElementCount,
+  `Forgotten ${existingElementCount - elementCount} elements: ${enumEntries(
+    ElementName
+  )
+    .filter(
+      ([name]) =>
+        !elements.find((element) => element.name === ElementName[name])
+    )
+    .map(([name]) => name)
+    .join(", ")}`
+)

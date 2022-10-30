@@ -1,4 +1,5 @@
 import { EquipmentType } from "./equipment"
+import { enumEntries } from "../utils"
 
 export enum SlotName {
   // Weapons & Armors
@@ -152,3 +153,14 @@ export function getSlotByEquipmentType(type: EquipmentType): {
       }
   }
 }
+
+export const existingSlotCount = enumEntries(SlotName).length
+export const slotCount = slots.length
+
+console.assert(
+  slotCount === existingSlotCount,
+  `Forgotten ${existingSlotCount - slotCount} slots: ${enumEntries(SlotName)
+    .filter(([name]) => !slots.find((slot) => slot.name === SlotName[name]))
+    .map(([name]) => name)
+    .join(", ")}`
+)

@@ -4,10 +4,7 @@
  * Ils peuvent être des armes, des armures, des objets magiques, des familiers, etc.
  */
 Object.defineProperty(exports, "__esModule", { value: true })
-exports.equipments =
-  exports.getSlotByEquipmentType =
-  exports.EquipmentType =
-    void 0
+exports.equipments = exports.EquipmentType = void 0
 const slots_1 = require("./slots")
 const styles_1 = require("./styles")
 const elements_1 = require("./elements")
@@ -48,88 +45,6 @@ var EquipmentType
   EquipmentType[(EquipmentType["Bear"] = 27)] = "Bear"
   EquipmentType[(EquipmentType["Lion"] = 28)] = "Lion"
 })((EquipmentType = exports.EquipmentType || (exports.EquipmentType = {})))
-function getSlotByEquipmentType(type) {
-  switch (type) {
-    case EquipmentType.Sword:
-    case EquipmentType.Gun:
-    case EquipmentType.Lance:
-    case EquipmentType.Haxe:
-    case EquipmentType.Bow:
-      return {
-        slot: slots_1.SlotName.Hands,
-        slotSizes: [1, 2],
-      }
-    case EquipmentType.Trousers:
-      return {
-        slot: slots_1.SlotName.Legs,
-        slotSizes: [1, 2],
-      }
-    case EquipmentType["T-shirt"]:
-    case EquipmentType.Sweater:
-      return {
-        slot: slots_1.SlotName.Chest,
-        slotSizes: [1],
-      }
-    case EquipmentType.Helmet:
-    case EquipmentType.Glasses:
-      return {
-        slot: slots_1.SlotName.Head,
-        slotSizes: [1],
-      }
-    case EquipmentType.Ring:
-      return {
-        slot: slots_1.SlotName.Finger,
-        slotSizes: [1],
-      }
-    case EquipmentType.Necklace:
-      return {
-        slot: slots_1.SlotName.Neck,
-        slotSizes: [1],
-      }
-    case EquipmentType.Bracelet:
-      return {
-        slot: slots_1.SlotName.Wrist,
-        slotSizes: [1],
-      }
-    case EquipmentType.Earring:
-      return {
-        slot: slots_1.SlotName.Ear,
-        slotSizes: [1, 2],
-      }
-    case EquipmentType.Dragon:
-    case EquipmentType.Phoenix:
-    case EquipmentType.Unicorn:
-      return {
-        slot: slots_1.SlotName.Invocation,
-        slotSizes: [1],
-      }
-    case EquipmentType.Lion:
-    case EquipmentType.Bear:
-    case EquipmentType.Werewolf:
-      return {
-        slot: slots_1.SlotName.Stand,
-        slotSizes: [3],
-      }
-    case EquipmentType.Wolf:
-      return {
-        slot: slots_1.SlotName.Stand,
-        slotSizes: [2],
-      }
-    case EquipmentType.Cat:
-    case EquipmentType.Snake:
-    case EquipmentType.Spider:
-    case EquipmentType.Bat:
-    case EquipmentType.Bird:
-    case EquipmentType.Fish:
-    case EquipmentType.Turtle:
-    case EquipmentType.Rabbit:
-      return {
-        slot: slots_1.SlotName.Stand,
-        slotSizes: [1],
-      }
-  }
-}
-exports.getSlotByEquipmentType = getSlotByEquipmentType
 exports.equipments = []
 // Generate equipments
 ;(0, utils_1.forEachEnum)(EquipmentType, (typeName, type) => {
@@ -137,7 +52,7 @@ exports.equipments = []
     ;(0, utils_1.forEachEnum)(
       elements_1.ElementName,
       (elementName, element) => {
-        const { slot, slotSizes } = getSlotByEquipmentType(type)
+        const { slot, slotSizes } = (0, slots_1.getSlotByEquipmentType)(type)
         for (const slotSize of slotSizes) {
           exports.equipments.push({
             name: `${elementName} ${styleName} ${typeName}`,
@@ -152,4 +67,3 @@ exports.equipments = []
     )
   })
 })
-console.log(exports.equipments.length)

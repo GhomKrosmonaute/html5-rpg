@@ -3,7 +3,13 @@
  * Les éléments influencent les faiblesses et les résistances des armes et des armures.
  */
 Object.defineProperty(exports, "__esModule", { value: true })
-exports.elements = exports.Weakness = exports.ElementName = void 0
+exports.elementCount =
+  exports.existingElementCount =
+  exports.elements =
+  exports.Weakness =
+  exports.ElementName =
+    void 0
+const utils_1 = require("../utils")
 var ElementName
 ;(function (ElementName) {
   ElementName[(ElementName["Water"] = 0)] = "Water"
@@ -64,17 +70,17 @@ exports.elements = [
       [ElementName.Metal, Weakness.Resistant],
     ]),
   },
-  {
-    name: ElementName.Wind,
-    weakness: new Map([
-      [ElementName.Metal, Weakness.Weak],
-      [ElementName.Plant, Weakness.Weak],
-      [ElementName.Fire, Weakness.Weak],
-      [ElementName.Wind, Weakness.Resistant],
-      [ElementName.Water, Weakness.Resistant],
-      [ElementName.Ground, Weakness.Resistant],
-    ]),
-  },
+  // {
+  //   name: ElementName.Wind,
+  //   weakness: new Map([
+  //     [ElementName.Metal, Weakness.Weak],
+  //     [ElementName.Plant, Weakness.Weak],
+  //     [ElementName.Fire, Weakness.Weak],
+  //     [ElementName.Wind, Weakness.Resistant],
+  //     [ElementName.Water, Weakness.Resistant],
+  //     [ElementName.Ground, Weakness.Resistant],
+  //   ]),
+  // },
   {
     name: ElementName.Metal,
     weakness: new Map([
@@ -91,3 +97,16 @@ exports.elements = [
     weakness: new Map(),
   },
 ]
+exports.existingElementCount = (0, utils_1.enumEntries)(ElementName).length
+exports.elementCount = exports.elements.length
+console.assert(
+  exports.elementCount === exports.existingElementCount,
+  `Forgotten ${exports.existingElementCount - exports.elementCount} slots: ${(0,
+  utils_1.enumEntries)(ElementName)
+    .filter(
+      ([name]) =>
+        !exports.elements.find((element) => element.name === ElementName[name])
+    )
+    .map(([name]) => name)
+    .join(", ")}`
+)
