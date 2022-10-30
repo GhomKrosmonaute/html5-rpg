@@ -13,3 +13,10 @@ export function clone<T>(obj: T): T {
 
   return copy
 }
+
+export function entries<Obj extends object>(
+  obj: Obj
+): [keyof Obj, Obj[keyof Obj]][] {
+  // @ts-ignore
+  return Object.entries(obj)
+}

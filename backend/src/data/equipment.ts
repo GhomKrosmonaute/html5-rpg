@@ -3,20 +3,17 @@
  * Ils peuvent être des armes, des armures, des objets magiques, des familiers, etc.
  */
 
-import type { StyleName } from "./styles"
-import type { ElementName } from "./elements"
+import { StyleName } from "./styles"
+import { ElementName } from "./elements"
 
-export type EquipmentType =
-  | "sword"
-  | "shield"
-  | "armor"
-  | "helmet"
-  | "boots"
-  | "gloves"
-  | "ring"
-  | "amulet"
-  | "trinket"
-  | "weapon"
+import { entries } from "../utils"
+
+export enum EquipmentType {
+  Weapon,
+  Armor,
+  Accessory,
+  Familiar,
+}
 
 export interface EquipmentFeatures {
   name: string
@@ -25,9 +22,19 @@ export interface EquipmentFeatures {
   element: ElementName
 }
 
-export const equipment = [
-  { name: "Big sword", element: "Earth", style: "Assassin", type: "sword" },
-  { name: "Sword", element: "Dark", style: "Assassin", type: "sword" },
-] satisfies Array<EquipmentFeatures>;
+export const equipments: EquipmentFeatures[] = []
 
-export type EquipmentName = typeof equipment[number]["name"]
+// Generate equipments
+
+for (const [type] of entries(EquipmentType)) {
+  for (const [style] of entries(StyleName)) {
+    for (const [element] of entries(ElementName)) {
+      equipments.push({
+        name: `${element} ${style} ${type}`,
+        type: EquipmentType[type],
+        style: StyleName[style],
+        element: ElementName[element],
+      })
+    }
+  }
+}
