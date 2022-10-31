@@ -3,7 +3,6 @@
  */
 
 import { enumEntries } from "../utils"
-import { SlotName, slots } from "./slots"
 
 export enum ElementName {
   Water,

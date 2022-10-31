@@ -151,6 +151,8 @@ export function getSlotByEquipmentType(type: EquipmentType): {
         slot: SlotName.Stand,
         slotSizes: [1],
       }
+    default:
+      throw new Error(`Missing slot for "${type}" equipment type`)
   }
 }
 

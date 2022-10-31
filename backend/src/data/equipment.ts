@@ -23,12 +23,19 @@ export enum EquipmentType {
   Sweater = "sweater",
   Helmet = "helmet",
   Glasses = "glasses",
+  Shoes = "shoes",
+  Gloves = "gloves",
+  Coat = "coat",
 
   // Accessories
   Ring = "ring",
   Necklace = "necklace",
   Bracelet = "bracelet",
   Earring = "earring",
+  "Magic stone" = "magic-stone",
+  Pendant = "pendant",
+  "Magic book" = "magic-book",
+  Hairpin = "hairpin",
 
   // Familiars
   Dragon = "dragon",
@@ -46,6 +53,15 @@ export enum EquipmentType {
   Rabbit = "rabbit",
   Bear = "bear",
   Lion = "lion",
+  Elephant = "elephant",
+  Fox = "fox",
+  Panda = "panda",
+  Monkey = "monkey",
+  Pig = "pig",
+  Cow = "cow",
+  Horse = "horse",
+  Dog = "dog",
+  Mouse = "mouse",
 }
 
 export interface EquipmentFeatures {
@@ -81,3 +97,11 @@ forEachEnum(EquipmentType, (typeName, type) => {
     })
   })
 })
+
+console.log(
+  equipments
+    .map((e) => e.name)
+    .sort((a, b) => (Math.random() > 0.5 ? 1 : -1))
+    .slice(0, 20)
+    .join("\n")
+)
