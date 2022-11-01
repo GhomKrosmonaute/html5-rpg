@@ -1,3 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-require("./data/equipment");
+"use strict"
+Object.defineProperty(exports, "__esModule", { value: true })
+require("./data/equipment")

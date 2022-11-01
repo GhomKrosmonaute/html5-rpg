@@ -7,7 +7,7 @@ import { SlotName, getSlotByEquipmentType, slots } from "./slots"
 import { StyleName } from "./styles"
 import { ElementName } from "./elements"
 
-import { forEachEnum } from "../utils"
+import { enumEntries, forEachEnum } from "../utils"
 
 export enum EquipmentType {
   // Weapons
@@ -16,52 +16,35 @@ export enum EquipmentType {
   Lance = "lance",
   Haxe = "haxe",
   Bow = "bow",
-
-  // Armors
-  Trousers = "trousers",
-  "T-shirt" = "t-shirt",
-  Sweater = "sweater",
-  Helmet = "helmet",
-  Glasses = "glasses",
-  Shoes = "shoes",
-  Gloves = "gloves",
-  Coat = "coat",
-
-  // Accessories
-  Ring = "ring",
-  Necklace = "necklace",
-  Bracelet = "bracelet",
-  Earring = "earring",
-  "Magic stone" = "magic-stone",
-  Pendant = "pendant",
-  "Magic book" = "magic-book",
-  Hairpin = "hairpin",
+  MagicRing = "magic-ring",
+  Heavy = "heavy",
+  Relic = "relic",
 
   // Familiars
-  Dragon = "dragon",
-  Unicorn = "unicorn",
-  Werewolf = "werewolf",
-  Phoenix = "phoenix",
-  Wolf = "wolf",
-  Cat = "cat",
-  Snake = "snake",
-  Spider = "spider",
-  Bat = "bat",
-  Bird = "bird",
-  Fish = "fish",
-  Turtle = "turtle",
-  Rabbit = "rabbit",
-  Bear = "bear",
-  Lion = "lion",
-  Elephant = "elephant",
-  Fox = "fox",
-  Panda = "panda",
-  Monkey = "monkey",
-  Pig = "pig",
-  Cow = "cow",
-  Horse = "horse",
-  Dog = "dog",
-  Mouse = "mouse",
+  // Dragon = "dragon",
+  // Unicorn = "unicorn",
+  // Werewolf = "werewolf",
+  // Phoenix = "phoenix",
+  // Wolf = "wolf",
+  // Cat = "cat",
+  // Snake = "snake",
+  // Spider = "spider",
+  // Bat = "bat",
+  // Bird = "bird",
+  // Fish = "fish",
+  // Turtle = "turtle",
+  // Rabbit = "rabbit",
+  // Bear = "bear",
+  // Lion = "lion",
+  // Elephant = "elephant",
+  // Fox = "fox",
+  // Panda = "panda",
+  // Monkey = "monkey",
+  // Pig = "pig",
+  // Cow = "cow",
+  // Horse = "horse",
+  // Dog = "dog",
+  // Mouse = "mouse",
 }
 
 export interface EquipmentFeatures {
@@ -102,6 +85,9 @@ console.log(
   equipments
     .map((e) => e.name)
     .sort((a, b) => (Math.random() > 0.5 ? 1 : -1))
-    .slice(0, 20)
+    .slice(0, 100)
     .join("\n")
 )
+//
+// console.log(enumEntries(EquipmentType).length * enumEntries(StyleName).length)
+// console.log(equipments.length)

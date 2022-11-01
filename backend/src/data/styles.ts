@@ -3,14 +3,13 @@ import { ElementName } from "./elements"
 import { SlotName } from "./slots"
 
 export enum StyleName {
-  Medieval = "medieval",
-  Steampunk = "steampunk",
   Cyberpunk = "cyberpunk",
-  Modern = "modern",
-  PopCulture = "pop_culture",
-  Japanese = "japanese",
   Gothic = "gothic",
-  Punk = "punk",
+  Japanese = "japanese",
+  Medieval = "medieval",
+  PostApo = "post-apo",
+  Steampunk = "steampunk",
+  Street = "street",
 }
 
 export interface StyleLayers {
