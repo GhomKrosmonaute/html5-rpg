@@ -130,11 +130,15 @@ export function getSlotByEquipmentType(type: EquipmentType): {
     case EquipmentType.Lion:
     case EquipmentType.Bear:
     case EquipmentType.Werewolf:
+    case EquipmentType.Elephant:
       return {
         slot: SlotName.Stand,
         slotSizes: [3],
       }
     case EquipmentType.Wolf:
+    case EquipmentType.Panda:
+    case EquipmentType.Cow:
+    case EquipmentType.Horse:
       return {
         slot: SlotName.Stand,
         slotSizes: [2],
@@ -147,12 +151,21 @@ export function getSlotByEquipmentType(type: EquipmentType): {
     case EquipmentType.Fish:
     case EquipmentType.Turtle:
     case EquipmentType.Rabbit:
+    case EquipmentType.Fox:
+    case EquipmentType.Monkey:
+    case EquipmentType.Pig:
+    case EquipmentType.Dog:
+    case EquipmentType.Mouse:
       return {
         slot: SlotName.Stand,
         slotSizes: [1],
       }
     default:
-      throw new Error(`Missing slot for "${type}" equipment type`)
+      console.error(`Missing slot for "${type}" equipment type`)
+      return {
+        slot: SlotName.Hands,
+        slotSizes: [0],
+      }
   }
 }
 
