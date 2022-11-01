@@ -63,10 +63,10 @@ export const equipments: EquipmentFeatures[] = []
 
 // Generate equipments
 forEachEnum(EquipmentType, (typeName, type) => {
+  const { slot, slotSizes } = getSlotByEquipmentType(type)
+
   forEachEnum(StyleName, (styleName, style) => {
     forEachEnum(ElementName, (elementName, element) => {
-      const { slot, slotSizes } = getSlotByEquipmentType(type)
-
       for (const slotSize of slotSizes) {
         equipments.push({
           name: `${elementName} ${styleName} ${typeName}`,

@@ -1,33 +1,29 @@
-"use strict"
-Object.defineProperty(exports, "__esModule", { value: true })
-exports.enumEntries =
-  exports.forEachEnum =
-  exports.entries =
-  exports.clone =
-    void 0
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.enumEntries = exports.forEachEnum = exports.entries = exports.clone = void 0;
 function clone(obj) {
-  if (obj === null || typeof obj !== "object") {
-    return obj
-  }
-  const copy = obj.constructor()
-  for (const attr in obj) {
-    if (obj.hasOwnProperty(attr)) {
-      copy[attr] = clone(obj[attr])
+    if (obj === null || typeof obj !== "object") {
+        return obj;
     }
-  }
-  return copy
+    const copy = obj.constructor();
+    for (const attr in obj) {
+        if (obj.hasOwnProperty(attr)) {
+            copy[attr] = clone(obj[attr]);
+        }
+    }
+    return copy;
 }
-exports.clone = clone
+exports.clone = clone;
 function entries(obj) {
-  // @ts-ignore
-  return Object.entries(obj)
+    // @ts-ignore
+    return Object.entries(obj);
 }
-exports.entries = entries
+exports.entries = entries;
 function forEachEnum(e, cb) {
-  enumEntries(e).forEach(([name, value]) => cb(name, value))
+    enumEntries(e).forEach(([name, value]) => cb(name, value));
 }
-exports.forEachEnum = forEachEnum
+exports.forEachEnum = forEachEnum;
 function enumEntries(e) {
-  return entries(e).filter(([name]) => isNaN(Number(name)))
+    return entries(e).filter(([name]) => isNaN(Number(name)));
 }
-exports.enumEntries = enumEntries
+exports.enumEntries = enumEntries;

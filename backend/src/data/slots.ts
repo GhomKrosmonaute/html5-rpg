@@ -30,10 +30,12 @@ export const slots: Slot[] = [
   // },
 ]
 
-export function getSlotByEquipmentType(type: EquipmentType): {
-  slot: SlotName
-  slotSizes: number[]
-} {
+export function getSlotByEquipmentType(type: EquipmentType):
+  | {
+      slot: SlotName
+      slotSizes: number[]
+    }
+  | never {
   switch (type) {
     case EquipmentType.Sword:
     case EquipmentType.Gun:
@@ -88,11 +90,7 @@ export function getSlotByEquipmentType(type: EquipmentType): {
     //     slotSizes: [1],
     //   }
     default:
-      console.error(`Missing slot for "${type}" equipment type`)
-      return {
-        slot: SlotName.Hands,
-        slotSizes: [0],
-      }
+      throw new Error(`Missing slot for "${type}" equipment type`)
   }
 }
 

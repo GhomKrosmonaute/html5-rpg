@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "build": "cd backend && tsc",
-    "format": "prettier --write views database backend package.json test.js index.js global.d.ts"
+    "format": "prettier --write views database backend/src package.json test.js index.js global.d.ts"
   },
   "prettier": {
     "semi": false
