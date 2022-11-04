@@ -1,17 +1,15 @@
 import { EventEmitter, BaseEventNames } from "@ghom/event-emitter"
 
-export type StatName = "hp"
+export type StatName = "health" | "mana" | "strength" | "agility" | "luck"
+
+export type Stats = Record<StatName, Stat>
 
 export interface StatEvents extends BaseEventNames {
   updated: [Stat]
 }
 
 export class Stat extends EventEmitter<StatEvents> {
-  constructor(
-    private _name: string,
-    private _value: number,
-    private _max: number
-  ) {
+  constructor(private _value: number, private _max: number = _value) {
     super()
   }
 

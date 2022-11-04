@@ -31,3 +31,7 @@ export function forEachEnum<Enum extends object>(
 export function enumEntries<Enum extends object>(e: Enum) {
   return entries(e).filter(([name]) => isNaN(Number(name)))
 }
+
+export function dice(fraction: number) {
+  return Math.random() < fraction
+}
