@@ -1,4 +1,4 @@
-import { Stats, Stat } from "./stats"
+import { Stats, Stat, StatName } from "./stats"
 import { Equipment, getEquipment } from "./equipments"
 import { BaseEventNames, EventEmitter } from "@ghom/event-emitter"
 import { Status } from "./statuses"
@@ -12,7 +12,7 @@ export interface CharacterEvents extends BaseEventNames {
 
 export interface CharacterFeatures {
   name: string
-  stats: Stats
+  baseStats: Record<StatName, number>
   equipment: Equipment
 }
 
@@ -34,12 +34,12 @@ export class Character extends EventEmitter<CharacterEvents> {
 export const characters: Character[] = [
   new Character({
     name: "Ghom",
-    stats: {
-      health: new Stat(100, 100),
-      mana: new Stat(100, 100),
-      strength: new Stat(10, 10),
-      agility: new Stat(10, 10),
-      luck: new Stat(10, 10),
+    baseStats: {
+      health: 100,
+      mana: 100,
+      strength: 10,
+      agility: 10,
+      luck: 10,
     },
     equipment: getEquipment("Computer"),
   }),

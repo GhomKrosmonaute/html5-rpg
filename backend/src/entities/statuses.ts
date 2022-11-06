@@ -33,7 +33,7 @@ export class Status extends EventEmitter<StatusEvents> {
 
 export const statusFeatures: StatusFeatures[] = [
   {
-    name: "corrosion",
+    name: "poisoned",
     description: "The target lose 1% of her max health for each frame",
     duration: 25,
     nextStep: (target, fight) => {
@@ -41,8 +41,8 @@ export const statusFeatures: StatusFeatures[] = [
     },
   },
   {
-    name: "hacked",
-    description: "The target is controlled by the hacker",
+    name: "controlled",
+    description: "The target is controlled by the equipment",
     duration: 10,
   },
 ]
