@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "npm build && node dist/index.js",
-    "format": "prettier --write tsconfig.json package.json src views",
-    "test": "npm build && node test.js"
+    "start": "npm run build && node dist/index.js",
+    "format": "prettier --write tsconfig.json package.json src src/client/views",
+    "test": "npm run build && node test.js"
   },
   "prettier": {
     "semi": false

@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fluent_json_schema_1 = __importDefault(require("fluent-json-schema"));
-function default_1(server) {
+function default_1(server, options, done) {
     server.post("/login", {
         schema: {
             params: fluent_json_schema_1.default
@@ -19,7 +19,7 @@ function default_1(server) {
             },
         },
     }, (request, reply) => {
-        return { oui: true };
+        reply.send(new Error("bite"));
     });
     server.post("/register", {
         schema: {
@@ -38,5 +38,6 @@ function default_1(server) {
     }, (request, reply) => {
         return { oui: true };
     });
+    done();
 }
 exports.default = default_1;

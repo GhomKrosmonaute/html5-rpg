@@ -31,7 +31,10 @@ exports.server = void 0;
 const fastify_1 = __importDefault(require("fastify"));
 exports.server = (0, fastify_1.default)({ logger: true });
 exports.server.register(Promise.resolve().then(() => __importStar(require("./authentication"))));
-exports.server.listen((_a = process.env.RPG_PORT) !== null && _a !== void 0 ? _a : 3000).catch((err) => {
-    exports.server.log.error(err);
-    process.exit(1);
+exports.server.listen((_a = process.env.RPG_PORT) !== null && _a !== void 0 ? _a : 3000, (err, address) => {
+    if (err) {
+        exports.server.log.error(err);
+        process.exit(1);
+    }
+    exports.server.log.info(`server listening on ${address}`);
 });

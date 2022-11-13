@@ -1,16 +1,18 @@
 import { FastifyInstance } from "fastify"
 
 import fluent from "fluent-json-schema"
+import { fromUsers } from "../db/user"
 
 export default function (server: FastifyInstance) {
   server.post(
     "/login",
     {
       schema: {
-        params: fluent
+        body: fluent
           .object()
-          .prop("username", fluent.string())
-          .prop("password", fluent.string()),
+          .prop("username", fluent.string().required())
+          .prop("password", fluent.string().required())
+          .required(),
         response: {
           200: fluent
             .object()
@@ -20,7 +22,14 @@ export default function (server: FastifyInstance) {
       },
     },
     (request, reply) => {
-      return { oui: true }
+      const user = fromUsers().where({
+        email: request.body.username,
+      })
+
+      reply.send({
+        id: user.id,
+        token: user.token,
+      })
     }
   )
 
