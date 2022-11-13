@@ -3,14 +3,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const user_1 = require("../db/user");
 const fluent_json_schema_1 = __importDefault(require("fluent-json-schema"));
 function default_1(server, options, done) {
     server.post("/login", {
         schema: {
-            params: fluent_json_schema_1.default
+            body: fluent_json_schema_1.default
                 .object()
-                .prop("username", fluent_json_schema_1.default.string())
-                .prop("password", fluent_json_schema_1.default.string()),
+                .prop("username", fluent_json_schema_1.default.string().required())
+                .prop("password", fluent_json_schema_1.default.string().required()),
             response: {
                 200: fluent_json_schema_1.default
                     .object()
@@ -19,7 +20,16 @@ function default_1(server, options, done) {
             },
         },
     }, (request, reply) => {
-        reply.send(new Error("bite"));
+        const user = (0, user_1.fromUsers)().where({
+            // @ts-ignore
+            email: request.body.username,
+        });
+        reply.send({
+            // @ts-ignore
+            id: user.id,
+            // @ts-ignore
+            token: user.token,
+        });
     });
     server.post("/register", {
         schema: {

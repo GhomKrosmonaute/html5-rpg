@@ -1,8 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// RUn the db
-require("./db/index");
+// Import your private configuration
+require("dotenv/config");
+// Run the database
+require("./db");
 // Run the API
-require("./api/index");
+require("./api");
 // Run the websocket
-require("./ws/index");
+require("./ws");

@@ -25,13 +25,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-var _a;
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.server = void 0;
 const fastify_1 = __importDefault(require("fastify"));
 exports.server = (0, fastify_1.default)({ logger: true });
-exports.server.register(Promise.resolve().then(() => __importStar(require("./authentication"))));
-exports.server.listen((_a = process.env.RPG_PORT) !== null && _a !== void 0 ? _a : 3000, (err, address) => {
+exports.server.register(Promise.resolve().then(() => __importStar(require("./routes/authentication"))));
+exports.server.listen({
+    port: (_a = process.env.API_PORT) !== null && _a !== void 0 ? _a : 3000,
+    host: (_b = process.env.API_HOST) !== null && _b !== void 0 ? _b : "localhost",
+}, (err, address) => {
     if (err) {
         exports.server.log.error(err);
         process.exit(1);
