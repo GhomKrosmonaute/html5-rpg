@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.enumEntries = exports.forEachEnum = exports.entries = exports.clone = void 0;
+exports.dice = exports.enumEntries = exports.forEachEnum = exports.fromEntries = exports.entries = exports.clone = void 0;
 function clone(obj) {
     if (obj === null || typeof obj !== "object") {
         return obj;
@@ -19,6 +19,11 @@ function entries(obj) {
     return Object.entries(obj);
 }
 exports.entries = entries;
+function fromEntries(entries) {
+    // @ts-ignore
+    return Object.fromEntries(entries);
+}
+exports.fromEntries = fromEntries;
 function forEachEnum(e, cb) {
     enumEntries(e).forEach(([name, value]) => cb(name, value));
 }
@@ -27,3 +32,7 @@ function enumEntries(e) {
     return entries(e).filter(([name]) => isNaN(Number(name)));
 }
 exports.enumEntries = enumEntries;
+function dice(fraction) {
+    return Math.random() < fraction;
+}
+exports.dice = dice;

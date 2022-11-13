@@ -37,7 +37,7 @@ export const statusFeatures: StatusFeatures[] = [
     description: "The target lose 1% of her max health for each frame",
     duration: 25,
     nextStep: (target, fight) => {
-      target.features.stats.health.percent -= 1 / 100
+      target.stats.health.percent -= 1 / 100
     },
   },
   {

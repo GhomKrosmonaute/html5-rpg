@@ -4,8 +4,10 @@
   "description": "HTML5 multiplayer RPG game",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
-    "format": "prettier --write views database backend/src package.json test.js index.js global.d.ts"
+    "build": "tsc",
+    "start": "npm build && node dist/index.js",
+    "format": "prettier --write tsconfig.json package.json src views",
+    "test": "npm build && node test.js"
   },
   "prettier": {
     "semi": false
@@ -35,6 +37,9 @@
   "homepage": "https://github.com/GhomKrosmonaute/html5-rpg#readme",
   "dependencies": {
     "@ghom/event-emitter": "^1.1.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.9.2",
+    "fluent-json-schema": "^4.0.0",
     "jest": "^29.2.1",
     "knex": "^2.3.0",
     "pg": "^8.8.0",

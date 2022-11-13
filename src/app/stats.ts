@@ -1,8 +1,16 @@
 import { EventEmitter, BaseEventNames } from "@ghom/event-emitter"
 
-export type StatName = "health" | "mana" | "strength" | "agility" | "luck"
+export const statNames = [
+  "health",
+  "mana",
+  "strength",
+  "agility",
+  "luck",
+] as const
 
+export type StatName = typeof statNames[number]
 export type Stats = Record<StatName, Stat>
+export type BaseStats = Record<StatName, number>
 
 export interface StatEvents extends BaseEventNames {
   updated: [Stat]
@@ -38,5 +46,15 @@ export class Stat extends EventEmitter<StatEvents> {
 
   get max() {
     return this._max
+  }
+}
+
+export function getDefaultBaseStats(): BaseStats {
+  return {
+    health: 100,
+    mana: 100,
+    strength: 10,
+    agility: 10,
+    luck: 10,
   }
 }
