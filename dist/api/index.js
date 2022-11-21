@@ -1,43 +1,13 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-var _a, _b;
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.server = void 0;
-const fastify_1 = __importDefault(require("fastify"));
-exports.server = (0, fastify_1.default)({ logger: true });
-exports.server.register(Promise.resolve().then(() => __importStar(require("./routes/authentication"))));
-exports.server.listen({
-    port: (_a = process.env.API_PORT) !== null && _a !== void 0 ? _a : 3000,
-    host: (_b = process.env.API_HOST) !== null && _b !== void 0 ? _b : "localhost",
-}, (err, address) => {
-    if (err) {
-        exports.server.log.error(err);
-        process.exit(1);
-    }
-    exports.server.log.info(`server listening on ${address}`);
-});
+const express_1 = __importDefault(require("express"));
+const authentication_1 = __importDefault(require("./routes/authentication"));
+exports.server = (0, express_1.default)();
+exports.server.use(express_1.default.json());
+exports.server.use("/auth", authentication_1.default);
+exports.server.listen((_a = process.env.API_PORT) !== null && _a !== void 0 ? _a : 3000, () => { var _a; return console.log(`Server listening on port ${(_a = process.env.API_PORT) !== null && _a !== void 0 ? _a : 3000}`); });

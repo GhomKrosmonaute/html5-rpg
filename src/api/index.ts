@@ -1,20 +1,12 @@
-import fastify from "fastify"
+import express from "express"
+import authentication from "./routes/authentication"
 
-export const server = fastify({ logger: true })
+export const server = express()
 
-server.register(import("./routes/authentication"))
+server.use(express.json())
 
-server.listen(
-  {
-    port: process.env.API_PORT ?? 3000,
-    host: process.env.API_HOST ?? "localhost",
-  },
-  (err, address) => {
-    if (err) {
-      server.log.error(err)
-      process.exit(1)
-    }
+server.use("/auth", authentication)
 
-    server.log.info(`server listening on ${address}`)
-  }
+server.listen(process.env.API_PORT ?? 3000, () =>
+  console.log(`Server listening on port ${process.env.API_PORT ?? 3000}`)
 )
