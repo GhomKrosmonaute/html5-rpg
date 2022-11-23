@@ -1,15 +1,14 @@
 import express from "express"
 import { body } from "express-validator"
-
 import { fromUsers } from "../../db/user"
-import {} from "../utils"
+import { comparePassword } from "../utils"
 
 const router = express.Router()
 
 router.post(
   "/login",
-  body("username").isString(),
-  body("password").isString(),
+  body("username").isString().notEmpty(),
+  body("password").isString().notEmpty(),
   async (req, res) => {
     const user = await fromUsers()
       .where({
@@ -18,6 +17,14 @@ router.post(
       .first()
 
     if (!user) return res.status(404).send(new Error("User not found"))
+
+    const passwordMatch = await comparePassword(
+      req.body.password,
+      user.passwordHash
+    )
+
+    if (!passwordMatch)
+      return res.status(401).send(new Error("Invalid password"))
 
     res.send({
       id: user.id,
@@ -29,10 +36,27 @@ router.post(
 router.post(
   "/register",
   body("email").isEmail(),
-  body("username").isString(),
+  body("username").isString().notEmpty(),
   body("password").isStrongPassword(),
-  (request, reply) => {
-    return { oui: true }
+  async (req, res) => {
+    const user = await fromUsers()
+      .where({
+        email: req.body.email,
+      })
+      .first()
+
+    if (user) return res.status(409).send(new Error("User already exists"))
+
+    const [id] = await fromUsers().insert({
+      email: req.body.email,
+      username: req.body.username,
+      passwordHash: req.body.password,
+    })
+
+    res.send({
+      id,
+      token: req.body.email,
+    })
   }
 )
 
