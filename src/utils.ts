@@ -21,6 +21,13 @@ export function entries<Obj extends object>(
   return Object.entries(obj)
 }
 
+export function fromEntries<Obj extends object>(
+  entries: [keyof Obj, Obj[keyof Obj]][]
+): Obj {
+  // @ts-ignore
+  return Object.fromEntries(entries)
+}
+
 export function forEachEnum<Enum extends object>(
   e: Enum,
   cb: (name: keyof Enum, value: Enum[keyof Enum]) => void

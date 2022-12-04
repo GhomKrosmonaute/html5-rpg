@@ -10,10 +10,16 @@ export interface PlayerData {
   teamCharacterNames: string[]
 }
 
+export const players: Player[] = []
+
 export class Player extends EventEmitter<PlayerEvents> {
   constructor(public data: PlayerData) {
     super()
+
+    players.push(this)
+  }
+
+  destroy() {
+    players.splice(players.indexOf(this), 1)
   }
 }
-
-export const players = []

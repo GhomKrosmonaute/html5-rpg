@@ -1,6 +1,8 @@
 /*
  * Les équipements sont les objets qui peuvent être équipés par les personnages.
  * Ils peuvent être des armes, des armures, des objets magiques, des familiers, etc.
+ * Un seul équipement par personnage.
+ *
  */
 
 import { Character } from "./characters"
@@ -33,9 +35,9 @@ export const equipments: Equipment[] = [
       mana: (stat) => stat.value * 1.5,
     },
     onAction(target) {
-      if (!target.hasStatus("hacked") && dice(1 / 5)) {
+      if (!target.hasStatus("controlled") && dice(1 / 5)) {
         console.log("Computer is hacking")
-        target.statuses.push(makeStatus("hacked"))
+        target.statuses.push(makeStatus("controlled"))
       } else {
         console.log("Computer is attacking")
         this.normalDamagesTo(target)
