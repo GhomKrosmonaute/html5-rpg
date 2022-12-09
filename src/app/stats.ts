@@ -58,3 +58,16 @@ export function getDefaultBaseStats(): BaseStats {
     luck: 10,
   }
 }
+
+export function getStatsState(stats: Stats): StatsState {
+  const result = {} as any
+
+  for (const name of statNames) {
+    const stat = stats[name]
+    result[name] = [stat.value, stat.max]
+  }
+
+  return result
+}
+
+export type StatsState = Record<StatName, [value: number, max: number]>

@@ -1,8 +1,15 @@
-import { BaseStats, getDefaultBaseStats, Stat, Stats } from "./stats"
-import { Equipment, getEquipment } from "./equipments"
+import {
+  BaseStats,
+  getDefaultBaseStats,
+  getStatsState,
+  Stat,
+  Stats,
+  StatsState,
+} from "./stats"
+import { Equipment, EquipmentState, getEquipment } from "./equipments"
 import { BaseEventNames, EventEmitter } from "@ghom/event-emitter"
-import { Status } from "./statuses"
 import { entries, fromEntries } from "../utils"
+import { Status } from "./statuses"
 
 export interface CharacterEvents extends BaseEventNames {
   action: [Character]
@@ -12,9 +19,15 @@ export interface CharacterEvents extends BaseEventNames {
 }
 
 export interface CharacterFeatures {
-  name?: string
+  name: string
   baseStats: BaseStats
   equipment: Equipment
+}
+
+export interface CharacterState {
+  name: string
+  stats: StatsState
+  equipment: EquipmentState
 }
 
 export class Character extends EventEmitter<CharacterEvents> {
@@ -34,6 +47,13 @@ export class Character extends EventEmitter<CharacterEvents> {
   hasStatus(name: string) {
     return this.statuses.some((s) => s.features.name === name)
   }
+
+  toJSON(): CharacterState {
+    return {
+      name: this.features.name,
+      stats: getStatsState(this.stats),
+    }
+  }
 }
 
 export function getPlayerCharacterList(): Character[] {
@@ -48,7 +68,12 @@ export function getPlayerCharacterList(): Character[] {
 
 export function generateCharacter() {
   return new Character({
+    name: generateCharacterName(),
     baseStats: getDefaultBaseStats(),
     equipment: getEquipment("Computer"),
   })
+}
+
+export function generateCharacterName() {
+  return "Ghom"
 }

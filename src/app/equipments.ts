@@ -19,10 +19,20 @@ export interface EquipmentFeatures {
   stats: Partial<Record<StatName, (stat: Stat) => number>>
 }
 
+export interface EquipmentState {
+  name: string
+}
+
 export class Equipment {
   constructor(public features: EquipmentFeatures) {}
 
   normalDamagesTo(target: Character) {}
+
+  toJSON(): EquipmentState {
+    return {
+      name: this.features.name,
+    }
+  }
 }
 
 export const equipments: Equipment[] = [

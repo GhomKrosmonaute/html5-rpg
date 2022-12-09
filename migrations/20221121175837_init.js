@@ -6,7 +6,8 @@ exports.up = function (knex) {
   knex.schema.createTable("users", (table) => {
     table.increments("id")
     table.string("email")
-    table.string("password")
+    table.string("passwordHash")
+    table.json("gameState").defaultTo("{}")
   })
 }
 

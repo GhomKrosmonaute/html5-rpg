@@ -5,6 +5,7 @@ export interface User {
   email: string
   username: string
   passwordHash: string
+  gameState: string
 }
 
 export const fromUsers = () => db<User>("users")

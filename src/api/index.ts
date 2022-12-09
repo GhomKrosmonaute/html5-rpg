@@ -1,31 +1,11 @@
 import express from "express"
-import { expressjwt } from "express-jwt"
-
-import authentication from "./routes/authentication"
-import gameCommands from "./routes/game-commands"
+import router from "./routes"
 
 export const server = express()
 
-const secret = process.env.API_SECRET
+// Middleware & Route handling
 
-if (!secret) throw new Error("Missing API_SECRET in .env")
-
-// Middleware handling
-
-server.use(express.json(), express.urlencoded({ extended: true }))
-
-// Route handling
-
-server.use("/auth", authentication)
-server.use(
-  "/game",
-  expressjwt({
-    secret,
-    algorithms: ["HS256"],
-    credentialsRequired: false,
-  }),
-  gameCommands
-)
+server.use(express.json(), express.urlencoded({ extended: true }), router)
 
 // Error handling
 
@@ -41,6 +21,9 @@ server.use(
     } else {
       next(err)
     }
+  },
+  (err: Error, req: express.Request, res: express.Response, next) => {
+    res.status(500).send(err.message)
   }
 )
 
